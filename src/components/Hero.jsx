@@ -28,7 +28,7 @@ const Hero = () => {
           </h1>
           
           <h2 style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', marginBottom: '2rem', fontWeight: 500, letterSpacing: '0.5px' }}>
-            AI/ML Engineer &middot; GenAI Developer &middot; RAG &middot; LangChain &middot; FastAPI &middot; AWS
+            AI/ML Engineer &middot; GenAI Developer &middot; RAG &middot; LangChain &middot; Agentic AI &middot; AWS
           </h2>
           
           <p style={{ maxWidth: '700px', margin: '0 auto 2.5rem', lineHeight: '1.6', fontSize: '1.1rem', color: 'var(--text-secondary)' }}>

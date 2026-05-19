@@ -43,7 +43,7 @@ const experiences = [
   {
     role: "Mentee",
     company: "Amazon ML Summer School",
-    period: "2022",
+    period: "July 2022 – August 2022",
     location: "Remote",
     color: "#10b981",
     bg: "rgba(16, 185, 129, 0.1)",

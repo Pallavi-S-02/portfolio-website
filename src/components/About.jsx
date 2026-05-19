@@ -14,7 +14,7 @@ const About = () => {
           
           <div className="about-text-content">
             <p>
-              I'm an AI/ML Engineer with a strong Computer Science Engineering background who is deeply passionate about production AI — and I've shipped end-to-end projects to prove it.
+              I'm an AI Engineer with a strong Computer Science Engineering background who is deeply passionate about production AI — and I've shipped end-to-end projects to prove it.
             </p>
             
             <p>

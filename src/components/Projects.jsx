@@ -4,23 +4,24 @@ import { FaGithub } from 'react-icons/fa';
 
 const projects = [
   {
-    title: "MedAssist AI",
+    title: "Vital-Mind",
     subtitle: "AI Medical Assistant Platform",
     date: "2023",
     description: "Built a LangGraph orchestrator with GPT-4o to route tasks across 7 specialized AI agents. Includes a Vision Agent for OCR on lab reports, a low-latency Voice Agent with sub-second responses, and a Symptom Analyst Agent.",
     tech: ["LangGraph", "GPT-4o", "RAG", "Pinecone", "Docker", "GCP", "WebSockets"],
-    demoLink: "https://www.youtube.com/watch?v=yaym9KqjYIA",
-    codeLink: "https://github.com/Pallavi-S-02",
+    demoLink: "http://medassist-ai.136.119.221.67.nip.io/",
+    youtubeLink: "https://www.youtube.com/watch?v=yaym9KqjYIA",
+    codeLink: "https://github.com/Pallavi-S-02/VitalMind",
     featured: true
   },
   {
     title: "Anomaly Detection",
-    subtitle: "Telecom KPI Monitoring System",
+    subtitle: "CommScope | Telecom KPI Monitoring",
     date: "2023",
     description: "Designed an unsupervised anomaly detection pipeline for telecom KPI monitoring using Isolation Forest. Built robust time-series preprocessing and integrated results into InfluxDB for real-time visualization.",
     tech: ["Isolation Forest", "Time-Series", "InfluxDB", "Grafana", "Python"],
     demoLink: "#",
-    codeLink: "https://github.com/Pallavi-S-02",
+    codeLink: "#",
     featured: true
   },
   {
@@ -39,8 +40,8 @@ const projects = [
     date: "2023",
     description: "Designed a personalized chatbot leveraging Gemini Pro LLM. Utilized Google Embeddings and BM25 RAG Ensemble for enhanced context retrieval, with ChromaDB for storage and Streamlit for the UI.",
     tech: ["Gemini Pro", "RAG", "ChromaDB", "Streamlit"],
-    demoLink: "#",
-    codeLink: "https://github.com/Pallavi-S-02",
+    demoLink: "https://chat-with-pallavi.streamlit.app/",
+    codeLink: "https://github.com/Pallavi-S-02/Personal-Chatbot-For-Pallavi",
     featured: false
   },
   {
@@ -50,7 +51,7 @@ const projects = [
     description: "Developed an end-to-end MLOps pipeline for phishing URL detection. Trained models with GridSearchCV, implemented tracking via MLflow, managed datasets via DagsHub, and deployed models via FastAPI.",
     tech: ["MLOps", "MLflow", "DagsHub", "FastAPI", "Random Forest"],
     demoLink: "#",
-    codeLink: "https://github.com/Pallavi-S-02",
+    codeLink: "https://github.com/Pallavi-S-02/Network_Security_System",
     featured: false
   },
   {
@@ -60,7 +61,7 @@ const projects = [
     description: "Built a machine learning system for B2B invoice management to predict payment dates using client credit and payment history. Implemented and compared Linear Regression, Decision Tree, Random Forest, and XGBoost models.",
     tech: ["Machine Learning", "Python", "XGBoost", "Random Forest", "Scikit-Learn"],
     demoLink: "#",
-    codeLink: "https://github.com/Pallavi-S-02",
+    codeLink: "https://github.com/Pallavi-S-02/Payment-Date-Prediction",
     featured: false
   }
 ];
@@ -131,16 +132,18 @@ const Projects = () => {
             </div>
             
             <div style={{ display: 'flex', gap: '1.5rem', borderTop: '1px solid rgba(255, 255, 255, 0.05)', paddingTop: '1.2rem' }}>
-              <a 
-                href={project.codeLink} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#9ca3af', fontSize: '0.9rem', textDecoration: 'none', transition: 'color 0.2s' }}
-                onMouseOver={(e) => e.target.style.color = '#fff'}
-                onMouseOut={(e) => e.target.style.color = '#9ca3af'}
-              >
-                <FaGithub size={16} /> GitHub
-              </a>
+              {project.codeLink !== "#" && (
+                <a 
+                  href={project.codeLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#9ca3af', fontSize: '0.9rem', textDecoration: 'none', transition: 'color 0.2s' }}
+                  onMouseOver={(e) => e.target.style.color = '#fff'}
+                  onMouseOut={(e) => e.target.style.color = '#9ca3af'}
+                >
+                  <FaGithub size={16} /> GitHub
+                </a>
+              )}
               {project.demoLink !== "#" && (
                 <a 
                   href={project.demoLink} 
@@ -150,7 +153,19 @@ const Projects = () => {
                   onMouseOver={(e) => e.target.style.textShadow = '0 0 8px rgba(6, 182, 212, 0.5)'}
                   onMouseOut={(e) => e.target.style.textShadow = 'none'}
                 >
-                  <ExternalLink size={16} /> Live Demo
+                  <ExternalLink size={16} /> App Link
+                </a>
+              )}
+              {project.youtubeLink && (
+                <a 
+                  href={project.youtubeLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#ef4444', fontSize: '0.9rem', textDecoration: 'none', fontWeight: '500', transition: 'text-shadow 0.2s' }}
+                  onMouseOver={(e) => e.target.style.textShadow = '0 0 8px rgba(239, 68, 68, 0.5)'}
+                  onMouseOut={(e) => e.target.style.textShadow = 'none'}
+                >
+                  <PlayCircle size={16} /> YouTube Demo
                 </a>
               )}
             </div>

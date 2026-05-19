@@ -20,7 +20,7 @@ const Training = () => {
             Advanced Training
           </span>
           <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-            Present
+            April 2026 - Present
           </span>
         </div>
         
@@ -29,7 +29,7 @@ const Training = () => {
         </h3>
         
         <p style={{ color: 'var(--text-secondary)', margin: '0', fontSize: '0.95rem' }}>
-          Python &middot; LLMs &middot; LangGraph &middot; RAG &middot; Prompt Engineering &middot; MLOps
+          Python &middot; LLMs &middot; LangGraph &middot; RAG
         </p>
       </div>
     </section>
