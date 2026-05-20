@@ -457,21 +457,58 @@
   font-size: 0.9rem;
 }
 
-/* Responsive */
+/* Responsive Classes Added for Hero & Navbar */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hire-me-btn {
+  padding: 0.4rem 1.2rem;
+  border-radius: 30px;
+  border-color: #06b6d4;
+  color: #06b6d4;
+  font-size: 0.9rem;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.hero-desc {
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.hero-actions-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+/* Responsive Overrides */
 @media (max-width: 992px) {
   .hero-content {
     grid-template-columns: 1fr;
     text-align: center;
   }
   
-  .hero-actions, .hero-socials {
-    justify-content: center;
-  }
-  
-  .hero-text p {
-    margin: 0 auto 2.5rem;
-  }
-
   .about-container {
     flex-direction: column;
     gap: 3rem;
@@ -488,6 +525,47 @@
 }
 
 @media (max-width: 768px) {
+  /* Navbar */
+  .nav-links {
+    gap: 1rem;
+  }
+  
+  .nav-links a:not(.hire-me-btn) {
+    display: none; /* Hide standard links, keep Hire Me visible */
+  }
+
+  .nav-logo span {
+    font-size: 1rem !important; /* Smaller logo text */
+  }
+
+  /* Hero */
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .hero-actions-container {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+    gap: 1rem;
+    padding: 0 2rem;
+  }
+
+  .hero-actions-container a {
+    width: 100%; /* Full width buttons */
+    justify-content: center;
+  }
+
+  /* About */
   .about-grid {
     grid-template-columns: 1fr;
   }
@@ -496,17 +574,16 @@
     text-align: center;
     align-items: center;
   }
-
-@media (max-width: 768px) {
-  .hero-text h1 {
-    font-size: 3rem;
-  }
   
-  .nav-links {
-    display: none; /* simple mobile nav for now */
-  }
-  
+  /* Global */
   .section {
-    padding: 4rem 0;
+    padding: 4rem 1rem; /* Better side padding */
   }
 }
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.4rem;
+  }
+}
+

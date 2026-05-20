@@ -23,19 +23,19 @@ const Hero = () => {
             <span style={{ color: '#06b6d4', fontSize: '0.85rem', fontWeight: '500' }}>Open to AI Engineer Roles</span>
           </div>
 
-          <h1 style={{ fontSize: '4rem', fontWeight: 'bold', marginBottom: '1rem', lineHeight: '1.2' }}>
+          <h1 className="hero-title">
             Pallavi <span style={{ color: '#06b6d4' }}>Sindkar</span>
           </h1>
           
-          <h2 style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', marginBottom: '2rem', fontWeight: 500, letterSpacing: '0.5px' }}>
-            AI/ML Engineer &middot; GenAI Developer &middot; RAG &middot; LangChain &middot; Agentic AI &middot; AWS
+          <h2 className="hero-subtitle">
+            AI Engineer &middot; GenAI Developer &middot; RAG &middot; LangChain &middot; Agentic AI &middot; AWS
           </h2>
           
-          <p style={{ maxWidth: '700px', margin: '0 auto 2.5rem', lineHeight: '1.6', fontSize: '1.1rem', color: 'var(--text-secondary)' }}>
+          <p className="hero-desc">
             Building production-grade AI systems — from advanced RAG pipelines and multi-agent orchestrations to predictive machine learning models.
           </p>
           
-          <div className="hero-actions" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginBottom: '4rem' }}>
+          <div className="hero-actions-container">
             <a href="#projects" className="btn-cyan" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               View Projects
             </a>
